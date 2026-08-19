@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Brand] – Women's Collection</title>
+  <meta name="description" content="Shop our curated women's collection at [Your Brand]." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ==================== HEADER (same as index) ==================== -->
+  <header class="header" role="banner">
+    <div class="announcement-bar" role="complementary" aria-label="Announcements">
+      <div class="container">
+        <p class="announcement-bar__text">
+          Free shipping on orders over $75
+          <a href="#" class="announcement-bar__link">Learn More</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container header__container">
+        <a href="/" class="header__logo" aria-label="[Your Brand] - Home">
+          <img src="https://placehold.co/140x40/2D6A2D/FFFFFF?text=[Your+Brand]" alt="[Your Brand]" width="140" height="40" />
+        </a>
+
+        <nav class="header__nav" aria-label="Main navigation">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Women</a>
+              <div class="header__dropdown">
+                <div class="container">
+                  <div class="header__dropdown-grid">
+                    <div class="header__dropdown-col">
+                      <h4 class="header__dropdown-heading">Categories</h4>
+                      <ul><li><a href="#">Dresses</a></li><li><a href="#">Tops</a></li><li><a href="#">Bottoms</a></li></ul>
+                    </div>
+                    <div class="header__dropdown-col">
+                      <h4 class="header__dropdown-heading">Collections</h4>
+                      <ul><li><a href="#">New Arrivals</a></li><li><a href="#">Best Sellers</a></li></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Men</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Kids</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Accessories</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Sale</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button class="header__action-btn" aria-label="Open search" data-search-toggle>
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="9" r="7" /><line x1="14" y1="14" x2="18" y2="18" />
+            </svg>
+          </button>
+          <a href="#" class="header__action-btn" aria-label="My account">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="10" cy="7" r="4" /><path d="M2 18c0-4 4-7 8-7s8 3 8 7" />
+            </svg>
+          </a>
+          <a href="#" class="header__action-btn header__cart" aria-label="Cart: 0 items">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="7" cy="17" r="1.5" /><circle cx="14" cy="17" r="1.5" /><path d="M2 2h3l1 8h10l1-6H4" />
+            </svg>
+            <span class="header__cart-count">0</span>
+          </a>
+          <button class="header__menu-toggle" aria-label="Toggle menu" data-menu-toggle>
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__search-overlay" role="search" aria-label="Site search" hidden>
+      <div class="container">
+        <form action="#" method="get" class="header__search-form">
+          <input type="search" name="q" placeholder="Search for products..." aria-label="Search" class="header__search-input" autocomplete="off" />
+          <button type="submit" class="header__search-btn" aria-label="Submit search">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="9" r="7" /><line x1="14" y1="14" x2="18" y2="18" />
+            </svg>
+          </button>
+          <button class="header__search-close" aria-label="Close search" data-search-close>
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="4" x2="16" y2="16" /><line x1="16" y1="4" x2="4" y2="16" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="header__mobile-nav" role="navigation" aria-label="Mobile navigation" hidden>
+      <div class="header__mobile-nav-inner">
+        <ul class="header__mobile-nav-list">
+          <li><a href="#">Women</a></li><li><a href="#">Men</a></li><li><a href="#">Kids</a></li>
+          <li><a href="#">Accessories</a></li><li><a href="#">Sale</a></li>
+          <li class="header__mobile-nav-divider"></li>
+          <li><a href="#">My Account</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== COLLECTION PAGE ==================== -->
+  <main class="collection-page">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Collections</a></li>
+          <li aria-current="page">Women</li>
+        </ol>
+      </nav>
+
+      <!-- Collection Header -->
+      <div class="collection__header">
+        <h1 class="collection__title">Women's Collection</h1>
+        <p class="collection__description">Discover our curated selection of sustainable women's fashion – from timeless basics to statement pieces.</p>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="collection__toolbar">
+        <button class="collection__filter-toggle btn btn-outline" data-filter-toggle>
+          <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="1" y1="3" x2="15" y2="3" /><line x1="3" y1="7" x2="13" y2="7" /><line x1="5" y1="11" x2="11" y2="11" />
+          </svg>
+          Filters
+          <span class="collection__filter-count">3</span>
+        </button>
+
+        <div class="collection__sort">
+          <label for="sort-by" class="collection__sort-label">Sort by</label>
+          <select id="sort-by" class="collection__sort-select">
+            <option value="best-selling">Best Selling</option>
+            <option value="title-ascending">Alphabetically, A–Z</option>
+            <option value="title-descending">Alphabetically, Z–A</option>
+            <option value="price-ascending">Price: Low to High</option>
+            <option value="price-descending">Price: High to Low</option>
+            <option value="created-descending">Newest First</option>
+          </select>
+        </div>
+
+        <span class="collection__count">42 products</span>
+      </div>
+
+      <!-- Layout: Filters + Products -->
+      <div class="collection__layout">
+        <!-- Filter Sidebar (Desktop) / Slide-out Panel (Mobile) -->
+        <aside class="collection__filters" role="complementary" aria-label="Product filters">
+          <div class="collection__filters-header">
+            <h3 class="collection__filters-title">Filters</h3>
+            <button class="collection__filters-reset" aria-label="Reset all filters">Reset</button>
+          </div>
+
+          <!-- Filter Group: Category -->
+          <div class="filter-group">
+            <h4 class="filter-group__heading">
+              <button class="filter-group__toggle" aria-expanded="true">
+                Category
+                <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 10 8 14 12 10" />
+                </svg>
+              </button>
+            </h4>
+            <div class="filter-group__options">
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="dresses" checked />
+                Dresses
+                <span class="filter-option__count">12</span>
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="tops" />
+                Tops
+                <span class="filter-option__count">15</span>
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="bottoms" />
+                Bottoms
+                <span class="filter-option__count">8</span>
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" name="category" value="outerwear" />
+                Outerwear
+                <span class="filter-option__count">7</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Size -->
+          <div class="filter-group">
+            <h4 class="filter-group__heading">
+              <button class="filter-group__toggle" aria-expanded="true">
+                Size
+                <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 10 8 14 12 10" />
+                </svg>
+              </button>
+            </h4>
+            <div class="filter-group__options filter-group__options--grid">
+              <label class="filter-option filter-option--pill">
+                <input type="checkbox" name="size" value="xs" />
+                XS
+              </label>
+              <label class="filter-option filter-option--pill">
+                <input type="checkbox" name="size" value="s" checked />
+                S
+              </label>
+              <label class="filter-option filter-option--pill">
+                <input type="checkbox" name="size" value="m" />
+                M
+              </label>
+              <label class="filter-option filter-option--pill">
+                <input type="checkbox" name="size" value="l" />
+                L
+              </label>
+              <label class="filter-option filter-option--pill">
+                <input type="checkbox" name="size" value="xl" />
+                XL
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Color -->
+          <div class="filter-group">
+            <h4 class="filter-group__heading">
+              <button class="filter-group__toggle" aria-expanded="true">
+                Color
+                <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 10 8 14 12 10" />
+                </svg>
+              </button>
+            </h4>
+            <div class="filter-group__options filter-group__options--grid">
+              <label class="filter-option filter-option--color" style="--color: #000000;">
+                <input type="checkbox" name="color" value="black" />
+                <span class="color-swatch" style="background: #000;"></span>
+              </label>
+              <label class="filter-option filter-option--color" style="--color: #FFFFFF;">
+                <input type="checkbox" name="color" value="white" />
+                <span class="color-swatch" style="background: #fff; border: 1px solid #ddd;"></span>
+              </label>
+              <label class="filter-option filter-option--color" style="--color: #FF6B6B;">
+                <input type="checkbox" name="color" value="red" />
+                <span class="color-swatch" style="background: #FF6B6B;"></span>
+              </label>
+              <label class="filter-option filter-option--color" style="--color: #4A90D9;">
+                <input type="checkbox" name="color" value="blue" />
+                <span class="color-swatch" style="background: #4A90D9;"></span>
+              </label>
+              <label class="filter-option filter-option--color" style="--color: #2D6A2D;">
+                <input type="checkbox" name="color" value="green" checked />
+                <span class="color-swatch" style="background: #2D6A2D;"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Price -->
+          <div class="filter-group">
+            <h4 class="filter-group__heading">
+              <button class="filter-group__toggle" aria-expanded="true">
+                Price
+                <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 10 8 14 12 10" />
+                </svg>
+              </button>
+            </h4>
+            <div class="filter-group__options">
+              <div class="price-range">
+                <label>
+                  <span class="visually-hidden">Min price</span>
+                  <input type="number" class="price-range__input" placeholder="$0" />
+                </label>
+                <span>—</span>
+                <label>
+                  <span class="visually-hidden">Max price</span>
+                  <input type="number" class="price-range__input" placeholder="$100" />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apply Filters (Mobile) -->
+          <div class="collection__filters-apply">
+            <button class="btn btn-primary btn-full" data-filter-apply>Apply Filters</button>
+          </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="collection__products" aria-label="Products">
+          <div class="product-grid">
+            <!-- Product 1 -->
+            <article class="product-card" role="group" aria-label="Product: Classic T‑Shirt">
+              <a href="#" class="product-card__link">
+                <div class="product-card__image-wrapper">
+                  <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Classic cotton t‑shirt in navy blue" loading="lazy" width="400" height="500" class="product-card__image" />
+                  <span class="product-card__badge badge--sale">Sale</span>
+                  <button class="product-card__wishlist" aria-label="Add to wishlist">
+                    <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-card__content">
+                  <h3 class="product-card__title">Classic T‑Shirt</h3>
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">$29.00</span>
+                    <span class="product-card__price-compare">$39.00</span>
+                  </div>
+                  <div class="product-card__rating" aria-label="Rating: 4.5 out of 5 stars">
+                    <span class="stars">★★★★½</span>
+                    <span class="rating-count">(127)</span>
+                  </div>
+                  <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+                </div>
+              </a>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card" role="group" aria-label="Product: Slim Fit Jeans">
+              <a href="#" class="product-card__link">
+                <div class="product-card__image-wrapper">
+                  <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=500&fit=crop" alt="Slim fit jeans in dark wash" loading="lazy" width="400" height="500" class="product-card__image" />
+                  <span class="product-card__badge badge--new">New</span>
+                  <button class="product-card__wishlist" aria-label="Add to wishlist">
+                    <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-card__content">
+                  <h3 class="product-card__title">Slim Fit Jeans</h3>
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">$59.00</span>
+                  </div>
+                  <div class="product-card__rating" aria-label="Rating: 4.8 out of 5 stars">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-count">(83)</span>
+                  </div>
+                  <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+                </div>
+              </a>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card" role="group" aria-label="Product: Organic Hoodie">
+              <a href="#" class="product-card__link">
+                <div class="product-card__image-wrapper">
+                  <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=500&fit=crop" alt="Organic cotton hoodie in heather grey" loading="lazy" width="400" height="500" class="product-card__image" />
+                  <button class="product-card__wishlist" aria-label="Add to wishlist">
+                    <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-card__content">
+                  <h3 class="product-card__title">Organic Hoodie</h3>
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">$79.00</span>
+                  </div>
+                  <div class="product-card__rating" aria-label="Rating: 4.7 out of 5 stars">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-count">(201)</span>
+                  </div>
+                  <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+                </div>
+              </a>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card" role="group" aria-label="Product: Eco Sneakers">
+              <a href="#" class="product-card__link">
+                <div class="product-card__image-wrapper">
+                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=500&fit=crop" alt="Eco‑friendly sneakers in white" loading="lazy" width="400" height="500" class="product-card__image" />
+                  <button class="product-card__wishlist" aria-label="Add to wishlist">
+                    <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-card__content">
+                  <h3 class="product-card__title">Eco Sneakers</h3>
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">$89.00</span>
+                  </div>
+                  <div class="product-card__rating" aria-label="Rating: 4.6 out of 5 stars">
+                    <span class="stars">★★★★½</span>
+                    <span class="rating-count">(64)</span>
+                  </div>
+                  <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+                </div>
+              </a>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card" role="group" aria-label="Product: Linen Blazer">
+              <a href="#" class="product-card__link">
+                <div class="product-card__image-wrapper">
+                  <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=500&fit=crop" alt="Linen blazer in beige" loading="lazy" width="400" height="500" class="product-card__image" />
+                  <span class="product-card__badge badge--sale">Sale</span>
+                  <button class="product-card__wishlist" aria-label="Add to wishlist">
+                    <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-card__content">
+                  <h3 class="product-card__title">Linen Blazer</h3>
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">$99.00</span>
+                    <span class="product-card__price-compare">$129.00</span>
+                  </div>
+                  <div class="product-card__rating" aria-label="Rating: 4.4 out of 5 stars">
+                    <span class="stars">★★★★</span>
+                    <span class="rating-count">(45)</span>
+                  </div>
+                  <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+                </div>
+              </a>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card" role="group" aria-label="Product: Silk Scarf">
+              <a href="#" class="product-card__link">
+                <div class="product-card__image-wrapper">
+                  <img src="https://images.unsplash.com/photo-1608063615781-e2ef8c73d114?w=400&h=500&fit=crop" alt="Silk scarf with floral pattern" loading="lazy" width="400" height="500" class="product-card__image" />
+                  <button class="product-card__wishlist" aria-label="Add to wishlist">
+                    <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-card__content">
+                  <h3 class="product-card__title">Silk Scarf</h3>
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">$34.00</span>
+                  </div>
+                  <div class="product-card__rating" aria-label="Rating: 4.9 out of 5 stars">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-count">(112)</span>
+                  </div>
+                  <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="pagination" aria-label="Product pagination">
+            <ul class="pagination__list">
+              <li><a href="#" aria-label="Previous page" class="pagination__link">&laquo;</a></li>
+              <li><a href="#" class="pagination__link pagination__link--active" aria-current="page">1</a></li>
+              <li><a href="#" class="pagination__link">2</a></li>
+              <li><a href="#" class="pagination__link">3</a></li>
+              <li><a href="#" aria-label="Next page" class="pagination__link">&raquo;</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER (same as index) ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="/" class="footer__logo">
+            <img src="https://placehold.co/140x40/2D6A2D/FFFFFF?text=[Your+Brand]" alt="[Your Brand]" width="140" height="40" />
+          </a>
+          <p class="footer__tagline">Sustainable fashion for the modern world.</p>
+          <form class="footer__newsletter" action="#" method="post">
+            <label for="footer-newsletter-email" class="footer__newsletter-label">Subscribe</label>
+            <div class="footer__newsletter-form">
+              <input type="email" id="footer-newsletter-email" name="email" placeholder="Enter your email" aria-label="Email address" class="footer__newsletter-input" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+          <div class="footer__social" aria-label="Follow us">
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2.8c2.7 0 3 .1 4 .2..."/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M20 10.1c0-5.5..."/></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M20 3.8c-.7.3..."/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Shop</h4>
+          <ul class="footer__list">
+            <li><a href="#">Women</a></li><li><a href="#">Men</a></li><li><a href="#">Kids</a></li>
+            <li><a href="#">Accessories</a></li><li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Support</h4>
+          <ul class="footer__list">
+            <li><a href="#">Contact</a></li><li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Company</h4>
+          <ul class="footer__list">
+            <li><a href="#">About</a></li><li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li><li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <span class="footer__copyright">&copy; 2026 [Your Brand]. All rights reserved.</span>
+          <nav class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a></nav>
+        </div>
+        <div class="footer__payments" aria-label="Accepted payments">
+          <svg class="payment-icon" aria-hidden="true" viewBox="0 0 38 24" width="38" height="24"><rect width="38" height="24" rx="3" fill="#fff"/><path d="M12 8h14v8H12V8z" fill="#1434CB"/><path d="M14 8h4v8h-4V8z" fill="#F6B001"/></svg>
+          <svg class="payment-icon" aria-hidden="true" viewBox="0 0 38 24" width="38" height="24"><rect width="38" height="24" rx="3" fill="#fff"/><circle cx="13" cy="12" r="4" fill="#EB001B"/><circle cx="25" cy="12" r="4" fill="#F79E1B"/></svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
