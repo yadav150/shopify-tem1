@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Brand] – Classic T‑Shirt</title>
+  <meta name="description" content="Shop the Classic T‑Shirt at [Your Brand] – sustainable, comfortable, and timeless." />
+  
+  <!-- Global fonts & base styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Global styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Page‑specific styles -->
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body>
+  <!-- ==================== HEADER (identical) ==================== -->
+  <header class="header" role="banner">
+    <div class="announcement-bar" role="complementary" aria-label="Announcements">
+      <div class="container">
+        <p class="announcement-bar__text">
+          Free shipping on orders over $75
+          <a href="#" class="announcement-bar__link">Learn More</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container header__container">
+        <a href="/" class="header__logo" aria-label="[Your Brand] - Home">
+          <img src="https://placehold.co/140x40/2D6A2D/FFFFFF?text=[Your+Brand]" alt="[Your Brand]" width="140" height="40" />
+        </a>
+
+        <nav class="header__nav" aria-label="Main navigation">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Women</a>
+              <div class="header__dropdown">
+                <div class="container">
+                  <div class="header__dropdown-grid">
+                    <div class="header__dropdown-col">
+                      <h4 class="header__dropdown-heading">Categories</h4>
+                      <ul><li><a href="#">Dresses</a></li><li><a href="#">Tops</a></li><li><a href="#">Bottoms</a></li></ul>
+                    </div>
+                    <div class="header__dropdown-col">
+                      <h4 class="header__dropdown-heading">Collections</h4>
+                      <ul><li><a href="#">New Arrivals</a></li><li><a href="#">Best Sellers</a></li></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Men</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Kids</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Accessories</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Sale</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button class="header__action-btn" aria-label="Open search" data-search-toggle>
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="9" r="7" /><line x1="14" y1="14" x2="18" y2="18" />
+            </svg>
+          </button>
+          <a href="#" class="header__action-btn" aria-label="My account">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="10" cy="7" r="4" /><path d="M2 18c0-4 4-7 8-7s8 3 8 7" />
+            </svg>
+          </a>
+          <a href="#" class="header__action-btn header__cart" aria-label="Cart: 0 items">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="7" cy="17" r="1.5" /><circle cx="14" cy="17" r="1.5" /><path d="M2 2h3l1 8h10l1-6H4" />
+            </svg>
+            <span class="header__cart-count">0</span>
+          </a>
+          <button class="header__menu-toggle" aria-label="Toggle menu" data-menu-toggle>
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__search-overlay" role="search" aria-label="Site search" hidden>
+      <div class="container">
+        <form action="#" method="get" class="header__search-form">
+          <input type="search" name="q" placeholder="Search for products..." aria-label="Search" class="header__search-input" autocomplete="off" />
+          <button type="submit" class="header__search-btn" aria-label="Submit search">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="9" r="7" /><line x1="14" y1="14" x2="18" y2="18" />
+            </svg>
+          </button>
+          <button class="header__search-close" aria-label="Close search" data-search-close>
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="4" x2="16" y2="16" /><line x1="16" y1="4" x2="4" y2="16" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="header__mobile-nav" role="navigation" aria-label="Mobile navigation" hidden>
+      <div class="header__mobile-nav-inner">
+        <ul class="header__mobile-nav-list">
+          <li><a href="#">Women</a></li><li><a href="#">Men</a></li><li><a href="#">Kids</a></li>
+          <li><a href="#">Accessories</a></li><li><a href="#">Sale</a></li>
+          <li class="header__mobile-nav-divider"></li>
+          <li><a href="#">My Account</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== PRODUCT PAGE ==================== -->
+  <main class="product-page">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Tops</a></li>
+          <li aria-current="page">Classic T‑Shirt</li>
+        </ol>
+      </nav>
+
+      <div class="product-page__layout">
+        <!-- Product Gallery -->
+        <div class="product-page__gallery">
+          <div class="product-page__main-image">
+            <img
+              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=750&fit=crop"
+              alt="Classic cotton t‑shirt in navy blue"
+              fetchpriority="high"
+              width="600"
+              height="750"
+              class="product-page__main-img"
+            />
+            <button class="product-page__zoom" aria-label="Zoom in on product image">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="9" r="7" /><line x1="14" y1="14" x2="18" y2="18" /><line x1="9" y1="5" x2="9" y2="13" /><line x1="5" y1="9" x2="13" y2="9" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-page__thumbnails" role="list" aria-label="Product image thumbnails">
+            <button class="product-page__thumb" aria-label="View image 1" aria-current="true">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=80&h=100&fit=crop" alt="" loading="lazy" width="80" height="100" />
+            </button>
+            <button class="product-page__thumb" aria-label="View image 2">
+              <img src="https://images.unsplash.com/photo-1620799139834-6b8f4c0c1fa1?w=80&h=100&fit=crop" alt="" loading="lazy" width="80" height="100" />
+            </button>
+            <button class="product-page__thumb" aria-label="View image 3">
+              <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7a3a7?w=80&h=100&fit=crop" alt="" loading="lazy" width="80" height="100" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <section class="product-page__info">
+          <!-- Vendor -->
+          <p class="product-page__vendor">[Your Brand]</p>
+
+          <!-- Title -->
+          <h1 class="product-page__title">Classic T‑Shirt</h1>
+
+          <!-- Rating -->
+          <div class="product-page__rating">
+            <span class="stars">★★★★½</span>
+            <span class="rating-count"><a href="#reviews">127 reviews</a></span>
+          </div>
+
+          <!-- Price -->
+          <div class="product-page__price">
+            <span class="product-page__price-current">$29.00</span>
+            <span class="product-page__price-compare">$39.00</span>
+            <span class="product-page__price-save">Save $10.00</span>
+          </div>
+
+          <!-- Shipping info -->
+          <div class="product-page__shipping">
+            <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 12h12M2 12V4h8l2 2h2v6h-2M6 12v2M10 12v2" />
+            </svg>
+            <span>Free shipping on orders over $75</span>
+          </div>
+
+          <!-- Variant: Size -->
+          <div class="product-page__variant">
+            <div class="product-page__variant-header">
+              <label class="product-page__variant-label" id="size-label">Size</label>
+              <a href="#" class="product-page__size-guide">Size Guide</a>
+            </div>
+            <div class="product-page__variant-options" role="radiogroup" aria-labelledby="size-label">
+              <button class="variant-option" role="radio" aria-checked="false" data-value="xs">XS</button>
+              <button class="variant-option" role="radio" aria-checked="true" data-value="s">S</button>
+              <button class="variant-option" role="radio" aria-checked="false" data-value="m">M</button>
+              <button class="variant-option" role="radio" aria-checked="false" data-value="l" disabled>L</button>
+              <button class="variant-option" role="radio" aria-checked="false" data-value="xl">XL</button>
+            </div>
+          </div>
+
+          <!-- Variant: Color -->
+          <div class="product-page__variant">
+            <label class="product-page__variant-label" id="color-label">Color</label>
+            <div class="product-page__variant-options product-page__variant-options--colors" role="radiogroup" aria-labelledby="color-label">
+              <button class="variant-option variant-option--color" role="radio" aria-checked="true" style="--color: #1A1A2E;" data-value="navy">
+                <span class="color-swatch" style="background: #1A1A2E;"></span>
+              </button>
+              <button class="variant-option variant-option--color" role="radio" aria-checked="false" style="--color: #F5F5F5;" data-value="white">
+                <span class="color-swatch" style="background: #F5F5F5; border: 1px solid #ddd;"></span>
+              </button>
+              <button class="variant-option variant-option--color" role="radio" aria-checked="false" style="--color: #2D6A2D;" data-value="green">
+                <span class="color-swatch" style="background: #2D6A2D;"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="product-page__quantity">
+            <label for="quantity" class="product-page__quantity-label">Quantity</label>
+            <div class="quantity-selector">
+              <button class="quantity-selector__btn" aria-label="Decrease quantity" data-qty-decrease>-</button>
+              <input type="number" id="quantity" class="quantity-selector__input" value="1" min="1" max="10" />
+              <button class="quantity-selector__btn" aria-label="Increase quantity" data-qty-increase>+</button>
+            </div>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="product-page__actions">
+            <button class="btn btn-primary btn-full product-page__add-to-cart">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="7" cy="17" r="1.5" /><circle cx="14" cy="17" r="1.5" /><path d="M2 2h3l1 8h10l1-6H4" />
+              </svg>
+              Add to Cart
+            </button>
+            <button class="product-page__wishlist-btn" aria-label="Add to wishlist">
+              <svg class="icon" aria-hidden="true" width="24" height="24" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="product-page__trust">
+            <span class="trust-badge">
+              <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 8l3 3 5-5" />
+              </svg>
+              Secure Payments
+            </span>
+            <span class="trust-badge">
+              <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M2 8h12M8 2v12" />
+              </svg>
+              Easy Returns
+            </span>
+            <span class="trust-badge">
+              <svg class="icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M2 12h12M2 12V4h8l2 2h2v6h-2" />
+              </svg>
+              Free Shipping Over $75
+            </span>
+          </div>
+
+          <!-- Description -->
+          <div class="product-page__description">
+            <h2 class="product-page__description-heading">Description</h2>
+            <p>
+              Our Classic T‑Shirt is crafted from 100% organic cotton, offering a soft, breathable feel 
+              that’s perfect for everyday wear. The tailored fit flatters any body type, while the 
+              ribbed crew neck and durable stitching ensure long‑lasting quality.
+            </p>
+            <ul>
+              <li>100% organic cotton</li>
+              <li>Regular fit with slight taper</li>
+              <li>Machine wash cold, tumble dry low</li>
+              <li>Made with sustainable dyes</li>
+            </ul>
+          </div>
+
+          <!-- Reviews Section -->
+          <section id="reviews" class="product-page__reviews">
+            <h2 class="product-page__reviews-heading">Customer Reviews</h2>
+            <div class="review-summary">
+              <div class="review-summary__average">
+                <span class="review-summary__score">4.5</span>
+                <span class="stars">★★★★½</span>
+                <span class="review-summary__count">Based on 127 reviews</span>
+              </div>
+              <button class="btn btn-outline">Write a Review</button>
+            </div>
+
+            <div class="review-list">
+              <article class="review">
+                <div class="review__header">
+                  <span class="review__author">Sarah M.</span>
+                  <span class="review__date">May 15, 2026</span>
+                </div>
+                <div class="review__rating">★★★★★</div>
+                <p class="review__text">
+                  Absolutely love this shirt! The fabric is so soft, and the fit is perfect. 
+                  I've washed it several times and it still looks brand new.
+                </p>
+              </article>
+              <article class="review">
+                <div class="review__header">
+                  <span class="review__author">James K.</span>
+                  <span class="review__date">May 10, 2026</span>
+                </div>
+                <div class="review__rating">★★★★</div>
+                <p class="review__text">
+                  Great quality and true to size. Shipping was fast too. Would definitely buy again.
+                </p>
+              </article>
+              <article class="review">
+                <div class="review__header">
+                  <span class="review__author">Emily R.</span>
+                  <span class="review__date">May 5, 2026</span>
+                </div>
+                <div class="review__rating">★★★★★</div>
+                <p class="review__text">
+                  The colour is exactly as pictured and the material feels premium. 
+                  Highly recommend for anyone looking for a sustainable staple.
+                </p>
+              </article>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER (identical) ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="/" class="footer__logo">
+            <img src="https://placehold.co/140x40/2D6A2D/FFFFFF?text=[Your+Brand]" alt="[Your Brand]" width="140" height="40" />
+          </a>
+          <p class="footer__tagline">Sustainable fashion for the modern world.</p>
+          <form class="footer__newsletter" action="#" method="post">
+            <label for="footer-newsletter-email" class="footer__newsletter-label">Subscribe</label>
+            <div class="footer__newsletter-form">
+              <input type="email" id="footer-newsletter-email" name="email" placeholder="Enter your email" aria-label="Email address" class="footer__newsletter-input" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+          <div class="footer__social" aria-label="Follow us">
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2.8c2.7 0 3 .1 4 .2..."/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M20 10.1c0-5.5..."/></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M20 3.8c-.7.3..."/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Shop</h4>
+          <ul class="footer__list">
+            <li><a href="#">Women</a></li><li><a href="#">Men</a></li><li><a href="#">Kids</a></li>
+            <li><a href="#">Accessories</a></li><li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Support</h4>
+          <ul class="footer__list">
+            <li><a href="#">Contact</a></li><li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Company</h4>
+          <ul class="footer__list">
+            <li><a href="#">About</a></li><li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li><li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <span class="footer__copyright">&copy; 2026 [Your Brand]. All rights reserved.</span>
+          <nav class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a></nav>
+        </div>
+        <div class="footer__payments" aria-label="Accepted payments">
+          <svg class="payment-icon" aria-hidden="true" viewBox="0 0 38 24" width="38" height="24"><rect width="38" height="24" rx="3" fill="#fff"/><path d="M12 8h14v8H12V8z" fill="#1434CB"/><path d="M14 8h4v8h-4V8z" fill="#F6B001"/></svg>
+          <svg class="payment-icon" aria-hidden="true" viewBox="0 0 38 24" width="38" height="24"><rect width="38" height="24" rx="3" fill="#fff"/><circle cx="13" cy="12" r="4" fill="#EB001B"/><circle cx="25" cy="12" r="4" fill="#F79E1B"/></svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global JS -->
+  <script src="script.js"></script>
+  <!-- Page‑specific JS -->
+  <script src="product.js" defer></script>
+</body>
+</html>
