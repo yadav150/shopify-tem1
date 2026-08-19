@@ -1,0 +1,203 @@
+{% comment %}
+  Homepage Template
+  
+  This template displays the store's homepage with:
+  - Hero section
+  - Featured categories
+  - Best sellers grid
+  - Brand story / trust section
+  - Newsletter signup
+  
+  All text, images, and links are customizable via theme settings.
+  Placeholders: [Your Hero Heading], [Your Hero Subheading], [Your Hero Image], etc.
+{% endcomment %}
+
+{% layout 'theme' %}
+
+<main class="homepage" role="main">
+
+  {% comment %} ======================== HERO SECTION ======================== {% endcomment %}
+  <section class="hero" aria-label="[Your Featured Collection Name]">
+    <div class="hero__content">
+      <div class="container">
+        <span class="hero__tag">[Your Tagline, e.g., New Collection]</span>
+        <h1 class="hero__title">[Your Hero Heading: Sustainable Fashion for Every Season]</h1>
+        <p class="hero__subtitle">[Your Hero Subheading: Discover our latest collection of eco-conscious apparel.]</p>
+        <a href="[Your Button Link, e.g., /collections/new-arrivals]" class="btn btn-primary hero__cta">
+          [Your Button Text, e.g., Shop Now]
+        </a>
+      </div>
+    </div>
+    <div class="hero__image">
+      <img
+        src="[Your Hero Image URL, e.g., https://via.placeholder.com/1200x600/EAEAEA/999999?text=Hero+Image]"
+        alt="[Your Hero Image Alt Text]"
+        fetchpriority="high"
+        width="1200"
+        height="600"
+      >
+    </div>
+  </section>
+
+  {% comment %} ======================== FEATURED CATEGORIES ======================== {% endcomment %}
+  <section class="featured-categories" aria-label="Shop by category">
+    <div class="container">
+      <h2 class="section-heading">[Your Section Heading, e.g., Shop by Category]</h2>
+      <div class="category-grid">
+        <!-- Category 1 -->
+        <a href="[Your Category Link, e.g., /collections/women]" class="category-card">
+          <img src="[Your Category Image URL, e.g., /assets/images/category-women.jpg]" alt="[Your Category Name]" loading="lazy">
+          <h3>[Category Name, e.g., Women]</h3>
+        </a>
+        <!-- Category 2 -->
+        <a href="[Your Category Link]" class="category-card">
+          <img src="[Your Category Image URL]" alt="[Your Category Name]" loading="lazy">
+          <h3>[Category Name, e.g., Men]</h3>
+        </a>
+        <!-- Category 3 -->
+        <a href="[Your Category Link]" class="category-card">
+          <img src="[Your Category Image URL]" alt="[Your Category Name]" loading="lazy">
+          <h3>[Category Name, e.g., Kids]</h3>
+        </a>
+        <!-- Category 4 -->
+        <a href="[Your Category Link]" class="category-card">
+          <img src="[Your Category Image URL]" alt="[Your Category Name]" loading="lazy">
+          <h3>[Category Name, e.g., Accessories]</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {% comment %} ======================== BEST SELLERS ======================== {% endcomment %}
+  <section class="best-sellers" aria-label="Best selling products">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-heading">[Your Section Heading, e.g., Best Sellers]</h2>
+        <a href="[Your View All Link, e.g., /collections/best-sellers]" class="section-link">View All →</a>
+      </div>
+      <div class="product-grid">
+        {% comment %} Loop through your products or use static placeholders {% endcomment %}
+        {% for product in collections['best-sellers'].products limit: 4 %}
+          {% render 'product-card', product: product, show_quick_add: true, show_rating: true %}
+        {% else %}
+          {% comment %} Fallback placeholders for demo {% endcomment %}
+          {% for i in (1..4) %}
+            <article class="product-card" role="group" aria-label="Product: [Your Product Name {{ i }}]">
+              <a href="#" class="product-card__link">
+                <div class="product-card__image-wrapper">
+                  <img
+                    src="https://via.placeholder.com/400x500/EAEAEA/999999?text=Product+{{ i }}"
+                    alt="[Your Image Alt Text]"
+                    loading="lazy"
+                    width="400"
+                    height="500"
+                    class="product-card__image"
+                  >
+                  <span class="product-card__badge badge--sale">Sale</span>
+                  <button class="product-card__wishlist" aria-label="Add to wishlist" type="button">
+                    {% render 'icon-heart', class: 'icon' %}
+                  </button>
+                </div>
+                <div class="product-card__content">
+                  <h3 class="product-card__title">[Your Product Name {{ i }}]</h3>
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">$[Your Price]</span>
+                    <span class="product-card__price-compare">$[Your Compare Price]</span>
+                  </div>
+                  <div class="product-card__rating" aria-label="Rating: 4.5 out of 5 stars">
+                    <span class="stars">★★★★½</span>
+                    <span class="rating-count">([Your Review Count])</span>
+                  </div>
+                  <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+                </div>
+              </a>
+            </article>
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% comment %} ======================== BRAND STORY / TRUST ======================== {% endcomment %}
+  <section class="brand-story" aria-label="[Your Brand Story Title]">
+    <div class="container">
+      <div class="brand-story__content">
+        <h2>[Your Brand Story Heading, e.g., Committed to Sustainability]</h2>
+        <p>[Your Brand Story Text: We believe fashion should be beautiful, functional, and kind to the planet.]</p>
+        <a href="[Your Link, e.g., /pages/about]" class="btn btn-secondary">[Your Button Text, e.g., Learn More]</a>
+      </div>
+    </div>
+  </section>
+
+  {% comment %} ======================== NEWSLETTER ======================== {% endcomment %}
+  <section class="newsletter-section" aria-label="Newsletter signup">
+    <div class="container">
+      <h2>[Your Newsletter Heading, e.g., Join Our Community]</h2>
+      <p>[Your Newsletter Subtext: Sign up for exclusive offers, early access, and sustainability tips.]</p>
+      <form class="newsletter-form" action="[Your Form Action, e.g., /contact#newsletter]" method="post">
+        <input
+          type="email"
+          name="email"
+          placeholder="[Your Placeholder Text, e.g., Enter your email]"
+          aria-label="Email address"
+          required
+        >
+        <button type="submit" class="btn btn-primary">[Your Button Text, e.g., Subscribe]</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+{% schema %}
+{
+  "name": "Homepage",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "text",
+      "id": "hero_tag",
+      "label": "Hero tag",
+      "default": "New Collection"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero title",
+      "default": "Sustainable Fashion for Every Season"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero subtitle",
+      "default": "Discover our latest collection of eco-conscious apparel."
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Hero button link",
+      "default": "/collections/new-arrivals"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Hero button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Homepage",
+      "category": "Pages"
+    }
+  ]
+}
+{% endschema %}
