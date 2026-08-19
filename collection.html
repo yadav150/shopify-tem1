@@ -6,14 +6,18 @@
   <title>[Your Brand] – Women's Collection</title>
   <meta name="description" content="Shop our curated women's collection at [Your Brand]." />
   
+  <!-- Global fonts & base styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   
+  <!-- Global styles (header, footer, buttons, product card) -->
   <link rel="stylesheet" href="style.css" />
+  <!-- Page‑specific styles -->
+  <link rel="stylesheet" href="collection.css" />
 </head>
 <body>
-  <!-- ==================== HEADER (same as index) ==================== -->
+  <!-- ==================== HEADER ==================== -->
   <header class="header" role="banner">
     <div class="announcement-bar" role="complementary" aria-label="Announcements">
       <div class="container">
@@ -298,7 +302,7 @@
         <!-- Product Grid -->
         <section class="collection__products" aria-label="Products">
           <div class="product-grid">
-            <!-- Product 1 -->
+            <!-- Product cards (same as before) – I'll include 6 for brevity -->
             <article class="product-card" role="group" aria-label="Product: Classic T‑Shirt">
               <a href="#" class="product-card__link">
                 <div class="product-card__image-wrapper">
@@ -325,7 +329,7 @@
               </a>
             </article>
 
-            <!-- Product 2 -->
+            <!-- Repeat similar for other products (I'll show 6 total) -->
             <article class="product-card" role="group" aria-label="Product: Slim Fit Jeans">
               <a href="#" class="product-card__link">
                 <div class="product-card__image-wrapper">
@@ -351,7 +355,6 @@
               </a>
             </article>
 
-            <!-- Product 3 -->
             <article class="product-card" role="group" aria-label="Product: Organic Hoodie">
               <a href="#" class="product-card__link">
                 <div class="product-card__image-wrapper">
@@ -376,7 +379,6 @@
               </a>
             </article>
 
-            <!-- Product 4 -->
             <article class="product-card" role="group" aria-label="Product: Eco Sneakers">
               <a href="#" class="product-card__link">
                 <div class="product-card__image-wrapper">
@@ -401,7 +403,6 @@
               </a>
             </article>
 
-            <!-- Product 5 -->
             <article class="product-card" role="group" aria-label="Product: Linen Blazer">
               <a href="#" class="product-card__link">
                 <div class="product-card__image-wrapper">
@@ -428,7 +429,6 @@
               </a>
             </article>
 
-            <!-- Product 6 -->
             <article class="product-card" role="group" aria-label="Product: Silk Scarf">
               <a href="#" class="product-card__link">
                 <div class="product-card__image-wrapper">
@@ -469,7 +469,7 @@
     </div>
   </main>
 
-  <!-- ==================== FOOTER (same as index) ==================== -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
@@ -532,6 +532,9 @@
     </div>
   </footer>
 
+  <!-- Global JS (header, search, etc.) -->
   <script src="script.js"></script>
+  <!-- Page‑specific JS -->
+  <script src="collection.js" defer></script>
 </body>
 </html>
