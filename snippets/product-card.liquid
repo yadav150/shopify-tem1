@@ -1,0 +1,82 @@
+{% comment %}
+  Product Card Snippet
+  Used in collection grids, homepage best sellers, etc.
+  
+  Accepts:
+  - product: the product object
+  - show_quick_add: boolean (optional)
+  - show_rating: boolean (optional)
+  
+  Placeholders: [Your Product Name], [Your Price], [Your Compare Price], [Your Image Alt Text]
+{% endcomment %}
+
+<article class="product-card" role="group" aria-label="Product: {{ product.title | default: '[Your Product Name]' }}">
+  <a href="{{ product.url | default: '#' }}" class="product-card__link">
+    <div class="product-card__image-wrapper">
+      {% if product.featured_image %}
+        <img
+          src="{{ product.featured_image | img_url: '400x500', crop: 'center' }}"
+          srcset="
+            {{ product.featured_image | img_url: '200x250', crop: 'center' }} 200w,
+            {{ product.featured_image | img_url: '400x500', crop: 'center' }} 400w
+          "
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          alt="{{ product.featured_image.alt | default: '[Your Image Alt Text]' | escape }}"
+          loading="lazy"
+          width="400"
+          height="500"
+          class="product-card__image"
+        >
+      {% else %}
+        <img
+          src="https://via.placeholder.com/400x500/EAEAEA/999999?text=[Your+Product+Image]"
+          alt="[Your Image Alt Text]"
+          loading="lazy"
+          width="400"
+          height="500"
+          class="product-card__image"
+        >
+      {% endif %}
+
+      {% comment %} Badges: Sale, New, Sold Out {% endcomment %}
+      {% if product.compare_at_price > product.price %}
+        <span class="product-card__badge badge--sale">Sale</span>
+      {% elsif product.tags contains 'new' %}
+        <span class="product-card__badge badge--new">New</span>
+      {% elsif product.available == false %}
+        <span class="product-card__badge badge--sold-out">Sold Out</span>
+      {% endif %}
+
+      {% comment %} Wishlist Button (optional) {% endcomment %}
+      <button class="product-card__wishlist" aria-label="Add to wishlist" type="button">
+        {% render 'icon-heart', class: 'icon' %}
+      </button>
+    </div>
+
+    <div class="product-card__content">
+      <h3 class="product-card__title">{{ product.title | default: '[Your Product Name]' }}</h3>
+
+      <div class="product-card__price">
+        {% if product.compare_at_price > product.price %}
+          <span class="product-card__price-current">{{ product.price | default: '$[Your Price]' | money }}</span>
+          <span class="product-card__price-compare">{{ product.compare_at_price | default: '$[Your Compare Price]' | money }}</span>
+        {% else %}
+          <span class="product-card__price-current">{{ product.price | default: '$[Your Price]' | money }}</span>
+        {% endif %}
+      </div>
+
+      {% if show_rating %}
+        <div class="product-card__rating" aria-label="Rating: [Your Rating] out of 5 stars">
+          <span class="stars">★★★★½</span>
+          <span class="rating-count">([Your Review Count])</span>
+        </div>
+      {% endif %}
+
+      {% if show_quick_add and product.available %}
+        <button class="product-card__quick-add btn btn-primary btn-sm" data-product-id="{{ product.id }}">
+          Quick Add
+        </button>
+      {% endif %}
+    </div>
+  </a>
+</article>
