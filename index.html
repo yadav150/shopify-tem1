@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Brand] – Sustainable Fashion</title>
+  <meta name="description" content="Discover sustainable fashion at [Your Brand]." />
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Load fonts with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Inline critical CSS for above-the-fold (optional, but here we rely on external) -->
+</head>
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" role="banner">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" role="complementary" aria-label="Announcements">
+      <div class="container">
+        <p class="announcement-bar__text">
+          Free shipping on orders over $75
+          <a href="#" class="announcement-bar__link">Learn More</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="header__main">
+      <div class="container header__container">
+        <!-- Logo -->
+        <a href="/" class="header__logo" aria-label="[Your Brand] - Home">
+          <img src="https://placehold.co/140x40/2D6A2D/FFFFFF?text=[Your+Brand]" alt="[Your Brand]" width="140" height="40" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="header__nav" aria-label="Main navigation">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Women</a>
+              <!-- Dropdown (simple example) -->
+              <div class="header__dropdown">
+                <div class="container">
+                  <div class="header__dropdown-grid">
+                    <div class="header__dropdown-col">
+                      <h4 class="header__dropdown-heading">Categories</h4>
+                      <ul>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Tops</a></li>
+                        <li><a href="#">Bottoms</a></li>
+                      </ul>
+                    </div>
+                    <div class="header__dropdown-col">
+                      <h4 class="header__dropdown-heading">Collections</h4>
+                      <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Men</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Kids</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Accessories</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Sale</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header__actions">
+          <button class="header__action-btn" aria-label="Open search" data-search-toggle>
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="9" r="7" />
+              <line x1="14" y1="14" x2="18" y2="18" />
+            </svg>
+          </button>
+          <a href="#" class="header__action-btn" aria-label="My account">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="10" cy="7" r="4" />
+              <path d="M2 18c0-4 4-7 8-7s8 3 8 7" />
+            </svg>
+          </a>
+          <a href="#" class="header__action-btn header__cart" aria-label="Cart: 0 items">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="7" cy="17" r="1.5" />
+              <circle cx="14" cy="17" r="1.5" />
+              <path d="M2 2h3l1 8h10l1-6H4" />
+            </svg>
+            <span class="header__cart-count">0</span>
+          </a>
+          <button class="header__menu-toggle" aria-label="Toggle menu" data-menu-toggle>
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="header__search-overlay" role="search" aria-label="Site search" hidden>
+      <div class="container">
+        <form action="#" method="get" class="header__search-form">
+          <input type="search" name="q" placeholder="Search for products..." aria-label="Search" class="header__search-input" autocomplete="off" />
+          <button type="submit" class="header__search-btn" aria-label="Submit search">
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="9" r="7" />
+              <line x1="14" y1="14" x2="18" y2="18" />
+            </svg>
+          </button>
+          <button class="header__search-close" aria-label="Close search" data-search-close>
+            <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="4" x2="16" y2="16" />
+              <line x1="16" y1="4" x2="4" y2="16" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="header__mobile-nav" role="navigation" aria-label="Mobile navigation" hidden>
+      <div class="header__mobile-nav-inner">
+        <ul class="header__mobile-nav-list">
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Sale</a></li>
+          <li class="header__mobile-nav-divider"></li>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Mobile backdrop (JS will add) -->
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="homepage">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Featured collection">
+      <div class="hero__content">
+        <div class="container">
+          <span class="hero__tag">New Collection</span>
+          <h1 class="hero__title">Sustainable Fashion for Every Season</h1>
+          <p class="hero__subtitle">Discover our latest collection of eco‑conscious apparel.</p>
+          <a href="#" class="btn btn-primary hero__cta">Shop Now</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img
+          src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1200&h=600&fit=crop"
+          alt="Models wearing sustainable fashion"
+          fetchpriority="high"
+          width="1200"
+          height="600"
+        />
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories" aria-label="Shop by category">
+      <div class="container">
+        <h2 class="section-heading">Shop by Category</h2>
+        <div class="category-grid">
+          <a href="#" class="category-card">
+            <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400&h=400&fit=crop" alt="Women's clothing" loading="lazy" width="400" height="400" />
+            <h3>Women</h3>
+          </a>
+          <a href="#" class="category-card">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400&h=400&fit=crop" alt="Men's clothing" loading="lazy" width="400" height="400" />
+            <h3>Men</h3>
+          </a>
+          <a href="#" class="category-card">
+            <img src="https://images.unsplash.com/photo-1512777576244-b5acd5e5b3c3?w=400&h=400&fit=crop" alt="Kids' clothing" loading="lazy" width="400" height="400" />
+            <h3>Kids</h3>
+          </a>
+          <a href="#" class="category-card">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=400&h=400&fit=crop" alt="Accessories" loading="lazy" width="400" height="400" />
+            <h3>Accessories</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="best-sellers" aria-label="Best selling products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-heading">Best Sellers</h2>
+          <a href="#" class="section-link">View All →</a>
+        </div>
+        <div class="product-grid">
+          <!-- Product Card 1 -->
+          <article class="product-card" role="group" aria-label="Product: Classic T‑Shirt">
+            <a href="#" class="product-card__link">
+              <div class="product-card__image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop"
+                  alt="Classic cotton t‑shirt in navy blue"
+                  loading="lazy"
+                  width="400"
+                  height="500"
+                  class="product-card__image"
+                />
+                <span class="product-card__badge badge--sale">Sale</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Classic T‑Shirt</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">$29.00</span>
+                  <span class="product-card__price-compare">$39.00</span>
+                </div>
+                <div class="product-card__rating" aria-label="Rating: 4.5 out of 5 stars">
+                  <span class="stars">★★★★½</span>
+                  <span class="rating-count">(127)</span>
+                </div>
+                <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+              </div>
+            </a>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card" role="group" aria-label="Product: Slim Fit Jeans">
+            <a href="#" class="product-card__link">
+              <div class="product-card__image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=500&fit=crop"
+                  alt="Slim fit jeans in dark wash"
+                  loading="lazy"
+                  width="400"
+                  height="500"
+                  class="product-card__image"
+                />
+                <span class="product-card__badge badge--new">New</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Slim Fit Jeans</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">$59.00</span>
+                </div>
+                <div class="product-card__rating" aria-label="Rating: 4.8 out of 5 stars">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-count">(83)</span>
+                </div>
+                <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+              </div>
+            </a>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card" role="group" aria-label="Product: Organic Hoodie">
+            <a href="#" class="product-card__link">
+              <div class="product-card__image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=500&fit=crop"
+                  alt="Organic cotton hoodie in heather grey"
+                  loading="lazy"
+                  width="400"
+                  height="500"
+                  class="product-card__image"
+                />
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Organic Hoodie</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">$79.00</span>
+                </div>
+                <div class="product-card__rating" aria-label="Rating: 4.7 out of 5 stars">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-count">(201)</span>
+                </div>
+                <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+              </div>
+            </a>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card" role="group" aria-label="Product: Eco Sneakers">
+            <a href="#" class="product-card__link">
+              <div class="product-card__image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=500&fit=crop"
+                  alt="Eco‑friendly sneakers in white"
+                  loading="lazy"
+                  width="400"
+                  height="500"
+                  class="product-card__image"
+                />
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 18C10 18 3 13 3 7c0-2 1.5-4 4-4 1.5 0 3 1 4 2.5C12 4 13.5 3 15 3c2.5 0 4 2 4 4 0 6-7 11-9 11z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Eco Sneakers</h3>
+                <div class="product-card__price">
+                  <span class="product-card__price-current">$89.00</span>
+                </div>
+                <div class="product-card__rating" aria-label="Rating: 4.6 out of 5 stars">
+                  <span class="stars">★★★★½</span>
+                  <span class="rating-count">(64)</span>
+                </div>
+                <button class="product-card__quick-add btn btn-primary btn-sm">Quick Add</button>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Story -->
+    <section class="brand-story" aria-label="Our story">
+      <div class="container">
+        <div class="brand-story__content">
+          <h2>Committed to Sustainability</h2>
+          <p>We believe fashion should be beautiful, functional, and kind to the planet. Every piece is crafted with care.</p>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" aria-label="Newsletter signup">
+      <div class="container">
+        <h2>Join Our Community</h2>
+        <p>Sign up for exclusive offers, early access, and sustainability tips.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Enter your email" aria-label="Email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Column 1: Brand + Newsletter -->
+        <div class="footer__col">
+          <a href="/" class="footer__logo">
+            <img src="https://placehold.co/140x40/2D6A2D/FFFFFF?text=[Your+Brand]" alt="[Your Brand]" width="140" height="40" />
+          </a>
+          <p class="footer__tagline">Sustainable fashion for the modern world.</p>
+          <form class="footer__newsletter" action="#" method="post">
+            <label for="footer-newsletter-email" class="footer__newsletter-label">Subscribe to our newsletter</label>
+            <div class="footer__newsletter-form">
+              <input
+                type="email"
+                id="footer-newsletter-email"
+                name="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+                class="footer__newsletter-input"
+                required
+              />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+          <div class="footer__social" aria-label="Follow us on social media">
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 2.8c2.7 0 3 .1 4 .2 1 .1 1.6.2 2.1.4.5.2.9.4 1.3.8.4.4.6.8.8 1.3.2.5.3 1.1.4 2.1.1 1 .1 1.3.1 4s-.1 3-.1 4c-.1 1-.2 1.6-.4 2.1-.2.5-.4.9-.8 1.3-.4.4-.8.6-1.3.8-.5.2-1.1.3-2.1.4-1 .1-1.3.1-4 .1s-3-.1-4-.1c-1-.1-1.6-.2-2.1-.4-.5-.2-.9-.4-1.3-.8-.4-.4-.6-.8-.8-1.3-.2-.5-.3-1.1-.4-2.1-.1-1-.1-1.3-.1-4s.1-3 .1-4c.1-1 .2-1.6.4-2.1.2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.5-.2 1.1-.3 2.1-.4 1-.1 1.3-.1 4-.1zm0-2.8C7.2 0 6.9 0 5.9.1c-.9.1-1.6.2-2.2.4-.6.3-1.1.6-1.6 1.1-.5.5-.8 1-1.1 1.6-.2.6-.3 1.3-.4 2.2C.1 6.9 0 7.2 0 10s.1 3.1.2 4.1c.1.9.2 1.6.4 2.2.3.6.6 1.1 1.1 1.6.5.5 1 .8 1.6 1.1.6.2 1.3.3 2.2.4C6.9 19.9 7.2 20 10 20s3.1-.1 4.1-.2c.9-.1 1.6-.2 2.2-.4.6-.3 1.1-.6 1.6-1.1.5-.5.8-1 1.1-1.6.2-.6.3-1.3.4-2.2.1-1 .2-1.3.2-4.1s-.1-3.1-.2-4.1c-.1-.9-.2-1.6-.4-2.2-.3-.6-.6-1.1-1.1-1.6-.5-.5-1-.8-1.6-1.1-.6-.2-1.3-.3-2.2-.4C13.1.1 12.8 0 10 0z" />
+                <circle cx="10" cy="10" r="2.5" />
+                <circle cx="15.5" cy="4.5" r="1" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M20 10.1c0-5.5-4.5-10-10-10s-10 4.5-10 10c0 5 3.7 9.1 8.4 9.8v-6.9H6.6v-2.9h1.8V8.5c0-1.8 1.1-2.8 2.7-2.8.8 0 1.6.1 1.6.1v1.8h-.9c-.9 0-1.2.6-1.2 1.2v1.4h2l-.3 2.9h-1.7v6.9c4.7-.7 8.4-4.8 8.4-9.8z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M20 3.8c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.2 1.8-2.1-.8.5-1.6.8-2.6 1-.7-.8-1.8-1.3-3-1.3-2.3 0-4.2 1.9-4.2 4.2 0 .3 0 .7.1 1-3.5-.2-6.6-1.8-8.7-4.3-.4.6-.6 1.3-.6 2.1 0 1.5.7 2.8 1.9 3.6-.7 0-1.3-.2-1.8-.5v.1c0 2 1.4 3.8 3.4 4.2-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1.5 1.6 2 2.8 3.8 2.8-1.4 1.1-3.2 1.7-5.1 1.7-.3 0-.7 0-1-.1 1.8 1.2 4 1.8 6.3 1.8 7.6 0 11.8-6.3 11.8-11.8v-.5c.8-.6 1.5-1.3 2.1-2.1z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Pinterest" class="footer__social-link">
+              <svg class="icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 0C4.5 0 0 4.5 0 10c0 4.2 2.6 7.8 6.3 9.4-.1-.8-.1-1.6 0-2.4.1-.4.7-3.1.7-3.1s-.2-.8-.2-1.8c0-1.7 1-3 2.2-3 .9 0 1.4.7 1.4 1.5 0 .9-.6 2.3-.9 3.6-.2.7.4 1.4 1.2 1.4 1.4 0 2.5-1.5 2.5-3.6 0-1.9-1.4-3.2-3.4-3.2-2.3 0-3.7 1.7-3.7 3.5 0 .7.3 1.4.7 1.8.1.1.1.2.1.3-.1.4-.3 1.3-.4 1.5-.1.2-.2.2-.4.1-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.8-6.3 3.6 0 6.4 2.5 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.3 0 0-.5 2-.6 2.5-.2.8-.8 1.6-1.3 2.2.9.3 1.9.5 2.9.5 5.5 0 10-4.5 10-10S15.5 0 10 0z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Shop -->
+        <div class="footer__col">
+          <h4 class="footer__heading">Shop</h4>
+          <ul class="footer__list">
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Support -->
+        <div class="footer__col">
+          <h4 class="footer__heading">Support</h4>
+          <ul class="footer__list">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Company -->
+        <div class="footer__col">
+          <h4 class="footer__heading">Company</h4>
+          <ul class="footer__list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <span class="footer__copyright">&copy; 2026 [Your Brand]. All rights reserved.</span>
+          <nav class="footer__legal" aria-label="Legal navigation">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </nav>
+        </div>
+        <div class="footer__payments" aria-label="Accepted payment methods">
+          <!-- SVG icons for payments (simplified) -->
+          <svg class="payment-icon" aria-hidden="true" viewBox="0 0 38 24" width="38" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="24" rx="3" fill="#fff" />
+            <path d="M12 8h14v8H12V8z" fill="#1434CB" />
+            <path d="M14 8h4v8h-4V8z" fill="#F6B001" />
+            <path d="M14 12c0-1.5.7-2.9 1.8-3.8C14.7 7 13.4 6.5 12 6.5 9.2 6.5 7 8.7 7 11.5S9.2 16.5 12 16.5c1.4 0 2.7-.5 3.8-1.3-1.1-.9-1.8-2.3-1.8-3.8z" fill="#F6B001" />
+          </svg>
+          <svg class="payment-icon" aria-hidden="true" viewBox="0 0 38 24" width="38" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="24" rx="3" fill="#fff" />
+            <circle cx="13" cy="12" r="4" fill="#EB001B" />
+            <circle cx="25" cy="12" r="4" fill="#F79E1B" />
+            <path d="M19 9.5c-1.4 1.5-2.2 3.6-2.2 5.5s.8 4 2.2 5.5c1.4-1.5 2.2-3.6 2.2-5.5s-.8-4-2.2-5.5z" fill="#FF5F00" />
+          </svg>
+          <svg class="payment-icon" aria-hidden="true" viewBox="0 0 38 24" width="38" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="24" rx="3" fill="#253B80" />
+            <path d="M10 6h18v12H10V6z" fill="#fff" />
+            <path d="M14 12c0-1.5.8-2.8 2-3.5-1.1-.9-2.5-1.5-4-1.5-3.3 0-6 2.7-6 6s2.7 6 6 6c1.5 0 2.9-.6 4-1.5-1.2-.7-2-2-2-3.5z" fill="#009CDE" />
+          </svg>
+          <svg class="payment-icon" aria-hidden="true" viewBox="0 0 38 24" width="38" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="24" rx="3" fill="#fff" />
+            <path d="M12 8h6v8h-6V8z" fill="#005EA6" />
+            <path d="M20 8h6v8h-6V8z" fill="#CC0000" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
